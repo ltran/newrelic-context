@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/smacker/newrelic-context"
 	"log"
 	"net/http"
+
+	"github.com/ltran/newrelic-context"
 )
 
 func indexHandlerFunc(rw http.ResponseWriter, req *http.Request) {

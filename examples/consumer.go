@@ -3,9 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/smacker/newrelic-context"
 	"log"
 	"net/http"
+
+	"github.com/ltran/newrelic-context"
 )
 
 func Consume(ctx context.Context, query string) {

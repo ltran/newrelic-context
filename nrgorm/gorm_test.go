@@ -6,8 +6,8 @@ import (
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	"github.com/ltran/newrelic-context/nrmock"
 	newrelic "github.com/newrelic/go-agent"
-	"github.com/smacker/newrelic-context/nrmock"
 )
 
 type Model struct {

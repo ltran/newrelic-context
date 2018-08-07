@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/jinzhu/gorm"
+	"github.com/ltran/newrelic-context/nrgorm"
+	"github.com/ltran/newrelic-context/nrredis"
 	"github.com/newrelic/go-agent"
-	"github.com/smacker/newrelic-context/nrgorm"
-	"github.com/smacker/newrelic-context/nrredis"
 	redis "gopkg.in/redis.v5"
 )
 
