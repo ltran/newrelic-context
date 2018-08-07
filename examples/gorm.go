@@ -6,6 +6,7 @@ import (
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	nrcontext "github.com/ltran/newrelic-context"
 	"github.com/ltran/newrelic-context/nrgorm"
 )
 

@@ -5,9 +5,7 @@ import (
 
 	"github.com/jinzhu/gorm"
 	"github.com/ltran/newrelic-context/nrgorm"
-	"github.com/ltran/newrelic-context/nrredis"
 	"github.com/newrelic/go-agent"
-	redis "gopkg.in/redis.v5"
 )
 
 type contextKey int
@@ -31,10 +29,4 @@ func GetTnxFromContext(c context.Context) newrelic.Transaction {
 func SetTxnToGorm(ctx context.Context, db *gorm.DB) *gorm.DB {
 	txn := GetTnxFromContext(ctx)
 	return nrgorm.SetTxnToGorm(txn, db)
-}
-
-// Gets transaction from Context and applies RedisWrapper, returns cloned client
-func WrapRedisClient(ctx context.Context, c *redis.Client) *redis.Client {
-	txn := GetTnxFromContext(ctx)
-	return nrredis.WrapRedisClient(txn, c)
 }
